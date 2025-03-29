@@ -28,8 +28,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "7bf89233-3d75-4cdf-914b-c111011538e3",
             "zIndex": -1,
+            "id": "7bf89233-3d75-4cdf-914b-c111011538e3",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -49,8 +49,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "ae50f464-d30e-46c6-8e4f-af163a5375c8",
             "zIndex": -1,
+            "id": "ae50f464-d30e-46c6-8e4f-af163a5375c8",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -811,8 +811,8 @@
                   "title": "Unauthorized Access",
                   "status": "Mitigated",
                   "severity": "TBD",
-                  "type": "Repudiation",
-                  "description": "Users might deny transactions or modify borrowing records.",
+                  "type": "Tampering",
+                  "description": "Users might modify borrowing records.",
                   "mitigation": "Implement Role-Based Access Control (RBAC)",
                   "modelType": "STRIDE",
                   "new": false,
@@ -822,12 +822,19 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 0,
+                "tampering": 1,
                 "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
